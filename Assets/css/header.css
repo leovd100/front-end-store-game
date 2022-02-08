@@ -1,0 +1,31 @@
+.header__gameStore{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: black;
+    color: white;
+    height: 6rem;
+    padding: 1rem;
+    box-shadow:  0 0 5px 10px black;
+}
+
+.header__gameStore ul{
+    display: flex;
+}
+
+.header__gameStore ul li{
+    list-style: none;
+    margin-left: 2rem;
+    transition: font-weight 0.4s ease-in-out;
+
+}
+
+.header__gameStore ul li:nth-child(5){
+    margin-right: 2rem;
+}
+
+.header__gameStore ul li:hover{
+    text-decoration: underline;
+    cursor: pointer;
+    font-weight: 600;
+}
