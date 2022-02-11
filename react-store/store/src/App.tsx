@@ -1,14 +1,19 @@
-import Header from './components/header/index';
-import VideoStyle from './components/videoslider';
+import Main from 'pages/main';
+import {
+  BrowserRouter,
+  Routes,
+  Route
+}
+  from "react-router-dom";
 
 function App() {
   return (
     <>
-      <Header/>
-      <VideoStyle/>
-      <br />
-      <br />
-      <br />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/videos" element={<Main/>} />
+        </Routes>
+      </BrowserRouter>
     </>
   );
 }

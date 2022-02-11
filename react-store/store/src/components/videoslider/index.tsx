@@ -13,13 +13,9 @@ function VideoStyle(){
             <div className="bg-video">
                 <HeaderInfo/>
                 <ArrowButtons/>
-                
-
                 <img className="bg-person" src={background} alt="" />
                 <img className="person" src={helo} alt=""/>
                 <BackGroundVideo/>
-                
-                    
             </div>
         
         </>
