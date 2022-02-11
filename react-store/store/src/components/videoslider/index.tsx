@@ -1,24 +1,25 @@
+import ArrowButtons from "components/arrowButtons";
+import HeaderInfo from "components/headerInfo";
 import BackGroundVideo from "../backGroundVideo";
+
+import helo from '../../assets/img/persons/helo.png';
+import background from '../../assets/img/halo-background.webp';
+
 import "./style.css"
 function VideoStyle(){
     return(
         <>
         
             <div className="bg-video">
-                <div id="left"> &lt;&lt; </div>
-                <div id="right"> &gt;&gt; </div>
-                <div className="container_btn">
-                    <img className="logo_game" src="" alt="" />
-                    <div className="btn_option">
-                        <div className="btn-compra">Comprar Agora!</div>
-                        <div className="btn-sobre">Saiba mais</div>
-                    </div>
-                </div>
+                <HeaderInfo/>
+                <ArrowButtons/>
+                
 
-                <img className="person" src="" alt=""/>
+                <img className="bg-person" src={background} alt="" />
+                <img className="person" src={helo} alt=""/>
                 <BackGroundVideo/>
                 
-                
+                    
             </div>
         
         </>

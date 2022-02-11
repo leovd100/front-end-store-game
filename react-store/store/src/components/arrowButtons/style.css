@@ -1,0 +1,34 @@
+
+#left, #right{
+    height: 10%;
+    width: 8rem;
+    position: absolute;
+    border: 2px solid white;
+    
+    margin: 1rem;
+    bottom: 0;
+    z-index: 1;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    background-color: rgb(61, 59, 59);
+    border-radius: 10px;
+    filter: opacity(0.2);
+    font-size: 35px;
+    transition: 0.5s ease-in-out;
+}
+
+#left{
+    right: 50%;
+}
+#right{
+    left: 50%;
+}
+
+#left:hover, #right:hover{
+    cursor: pointer;
+    color: white;
+    filter: opacity(0.5);
+}

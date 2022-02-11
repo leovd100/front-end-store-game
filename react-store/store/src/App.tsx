@@ -6,6 +6,9 @@ function App() {
     <>
       <Header/>
       <VideoStyle/>
+      <br />
+      <br />
+      <br />
     </>
   );
 }
