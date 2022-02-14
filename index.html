@@ -5,10 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script type="module"  src="Assets/js/script.js" defer></script>
-        <script src="Assets/js/urlTst.js" defer></script>
-        
-
-       
+     
         <title>Document</title>
 </head>
     <body>
@@ -25,11 +22,16 @@
                     <li>Contato</li>
                 </ul>
             </div>
+
+            <form action class="form-search">
+                <input type="text" class="form_imput">
+                <button type="submit">Buscar</button>
+            </form>
         </header>
         <main>
             <div class="bg-video">
-                <div left> << </div>
-                <div right>>></div>
+                <div left> &lt;&lt; </div>
+                <div right> &gt;&gt; </div>
                 <div class="container_btn">
                     <img class="logo_game" src="Assets/img/tlouLogo.png" alt="" >
                     <div class="btn_option">
@@ -38,7 +40,7 @@
                     </div>
                 </div>
 
-                <img class="person" src="Assets/img/thelast.png" alt="">
+                <img class="person" src="Assets/img/persons/thelast.png" alt="">
                 <video class="bg-video__content" autoplay muted loop poster="./Assets/img/screen_black.png">
                    <source class="vd1" src="./Assets/vid/thelast2.mp4#t=15,0" type="video/mp4">
                    <source class="vd1" src="./Assets/vid/thelast2.mp4#t=15,0" type="video/webm">
@@ -70,10 +72,11 @@
             </div>
 
         </footer>
+        <link rel="stylesheet" href="Assets/css/main.css">
         <link rel="stylesheet" href="Assets/css/header.css" defer>
         <link rel="stylesheet" href="Assets/css/style.css" defer>
         <link rel="stylesheet" href="Assets/css/card.css"defer>
-        <script src="Assets/js/card.js" defer></script>
-
+      
+        <script type="module" src="Assets/js/card.js" defer></script>
     </body> 
 </html>

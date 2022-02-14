@@ -29,3 +29,7 @@
     cursor: pointer;
     font-weight: 600;
 }
+
+img[logo]{
+    width:  9rem;
+}

@@ -38,10 +38,13 @@ btn_compra.addEventListener('click', function(){
 index = 0;
 
 btn_nextLeft.addEventListener('click' ,() => {
+    
     index--;
     if (index < 0){
         index = 2;
     }
+
+    console.log(index);
     LoadBackGround(index);
     
     
@@ -53,6 +56,7 @@ btn_nextRight.addEventListener('click' ,() => {
     if (index > 2){
         index = 0;
     }
+    console.log(index);
 
     LoadBackGround(index);
 
