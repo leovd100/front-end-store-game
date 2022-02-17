@@ -8,7 +8,6 @@
 }
 
 
-
 .content{
     width: 100%;
     
@@ -23,6 +22,7 @@
 
 
 footer{
+    margin-top: 10rem;
     height: 30vh;
     width: 100%;
     background-color: black;

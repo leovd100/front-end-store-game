@@ -5,6 +5,9 @@ const btn_compra = document.querySelector(".btn-compra");
 const btn_sobre = document.querySelector(".btn-sobre");
 const btn_nextLeft = document.querySelector("[left]")
 const btn_nextRight = document.querySelector("[right]")
+const campo = document.querySelector('.form_imput');
+const form = document.querySelector('.form-search');
+
 
 /* 
 const buscaDados = async(value) => {
@@ -30,67 +33,80 @@ pathPerson: "./Assets/img/persons/kratos.png"
 pathVideo: "./Assets/vid/godofwar.mp4#t8,100"
  */
 
-btn_compra.addEventListener('click', function(){
-    console.log("Clickou")
+
+
+
+
+
+form.addEventListener('submit', event => {
+    event.preventDefault();
+    localStorage.setItem("data", campo.value);
+    if(localStorage.getItem("data") != null){
+        window.location.href = "../../searchPage.html"
+    }
 })
 
+let indexMain = 0;
 
-index = 0;
 
 btn_nextLeft.addEventListener('click' ,() => {
     
-    index--;
-    if (index < 0){
-        index = 2;
+    indexMain--;
+    if (indexMain < 0){
+        indexMain = 2;
     }
-
-    console.log(index);
-    LoadBackGround(index);
+    
+    console.log(indexMain)
+    LoadBackGround(indexMain);
     
     
 })
 
 
 btn_nextRight.addEventListener('click' ,() => {
-    index++;
-    if (index > 2){
-        index = 0;
+    console.log(indexMain)
+    console.log("cliclou")
+    indexMain++;
+    if (indexMain > 2){
+        indexMain = 0;
     }
-    console.log(index);
+    console.log(indexMain)
 
-    LoadBackGround(index);
+
+    LoadBackGround(indexMain);
 
 })
 
+
 let changeLogo = (e) => {
-    path = ["./Assets/img/logoGame.png", "./Assets/img/tlouLogo.png" , "./Assets/img/halo-logo.png"]
+    const path = ["./Assets/img/logoGame.png", "./Assets/img/tlouLogo.png" , "./Assets/img/halo-logo.png"]
+   
     return path[e];
 }
 
-
 let changePerson = (e) => {
-    path = [
+    const path = [
         "./Assets/img/persons/kratos.png", "./Assets/img/persons/thelast.png", "./Assets/img/persons/helo.png",
     ]
     return path[e]
 }
 
-function changeVideo(index){
-    path = ['./Assets/vid/godofwar.mp4#t8,100', "./Assets/vid/thelast2.mp4#t8,100", "./Assets/vid/haloinfinite.mp4#t8,100"]
-    return path[index]
+let changeVideo = (e) => {
+    const path = ['./Assets/vid/godofwar.mp4#t8,100', "./Assets/vid/thelast2.mp4#t8,100", "./Assets/vid/haloinfinite.mp4#t8,100"]
+    return path[e]
 }
 
 
 let changeBackGround = (index) => {
-    path = [
+    const path = [
         './Assets/img/montanha.jpg','./Assets/img/scenaryTheLast.jpg','./Assets/img/halo-background.webp'
     ]
+    
     return path[index];
 }
 
 
-
-
+/* 
 buscaDados("http://localhost:8081/video").then( x => x.map(x => {
     let teste = videoObj(x.pathVideo, x.pathLogo, x.pathPerson, x.pathBackGround)    
     console.log(teste)
@@ -98,7 +114,7 @@ buscaDados("http://localhost:8081/video").then( x => x.map(x => {
     return x.lenght
 })
 
-
+ */
 
 
 const LoadBackGround = (index) => {
@@ -114,25 +130,16 @@ const LoadBackGround = (index) => {
     logoGame.src = changeLogo(index)
     peron.src = changePerson(index)
     bg_person.style.backgroundImage = `url(${changeBackGround(index)})`
+   
     video.forEach(e => {       
         e.src = changeVideo(index)
     });
 
 
-    
-   
-    console.log(peron)
-    
     bg_video.loop = true;
     bg_video.load()
     bg_video.play()
 }
 
-LoadBackGround(index);
 
-
-
-
-
-
-
+LoadBackGround(indexMain);

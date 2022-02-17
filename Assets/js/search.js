@@ -35,7 +35,14 @@ const buscaDados = async(value) => {
     let url = `http://localhost:8081/games/filter?name=${value}` 
     const dados = await fetch(url)
     const jsonData = await dados.json();
-    preencherLista(jsonData);
+    if (jsonData.length == 0){
+        content.innerText = ""
+        notFound();
+
+    }else {
+        content.innerHTML = ""
+        preencherLista(jsonData);
+    }
 }
 
 const preencherLista = (jsonData) => {
@@ -51,6 +58,7 @@ const preencherLista = (jsonData) => {
         content.appendChild(card(obj)) 
 
     })
+    
 }
 
 
@@ -62,16 +70,23 @@ form.addEventListener('submit', event => {
     if(campo.value != ''){
         buscaDados(campo.value)
     }
-   
-   
-    
-
 })
+
+
+function notFound(){
+    const text = document.createElement("div");
+    text.className = "text_notFound"
+    text.innerHTML = `<h2><span class="notFound">Ops!</span> Não foi encontrado nenhum resultado para a busca<span class="notFound"> "${localStorage.getItem("data")}" </span> </h2>`
+    content.appendChild(text); 
+}
+
+
+
 
 function removeAll(){
     let card = document.querySelectorAll(".card");
     card.forEach(x => x.remove());
 }
 
-
-
+campo.value = localStorage.getItem("data");
+buscaDados(campo.value);

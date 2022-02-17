@@ -33,3 +33,14 @@
 img[logo]{
     width:  9rem;
 }
+
+.form-search{
+   
+    
+    margin-left: 6rem;
+}
+.form-search .form_imput{
+    border-radius: 5px;
+    width: 25rem;
+    height: 2rem;
+}
