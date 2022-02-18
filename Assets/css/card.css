@@ -63,3 +63,7 @@
 .card .nameGame{
     text-align: center;
 }
+
+.id{
+    display: none;
+}

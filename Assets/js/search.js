@@ -76,7 +76,7 @@ form.addEventListener('submit', event => {
 function notFound(){
     const text = document.createElement("div");
     text.className = "text_notFound"
-    text.innerHTML = `<h2><span class="notFound">Ops!</span> Não foi encontrado nenhum resultado para a busca<span class="notFound"> "${localStorage.getItem("data")}" </span> </h2>`
+    text.innerHTML = `<h2><span class="notFound">Ops!</span> Não foi encontrado nenhum resultado para a busca<span class="notFound"> "${campo.value}" </span> </h2>`
     content.appendChild(text); 
 }
 

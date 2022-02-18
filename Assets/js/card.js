@@ -7,7 +7,9 @@ const card = (objeto) => {
     const preco = document.createElement("p");
     const button = document.createElement("button");
     const name = document.createElement("p");
+    const id = document.createElement("span");
 
+    id.className = "id";
     name.className = "nameGame"
     preco.className = "precoGame"
     card.className = "card";
@@ -18,10 +20,13 @@ const card = (objeto) => {
     card.appendChild(img)
     name.textContent = objeto.nome;
     card.appendChild(name);
+    id.innerText = objeto.id;
+    card.appendChild(id);
     preco.textContent = objeto.preco.toFixed(2);//"99,90";
     card.appendChild(preco)
+    
     button.textContent = "Comprar";
-    button.className = "btn_compra";
+    button.className = "btn_cdCompra";
     card.appendChild(button)
 
 
@@ -36,10 +41,6 @@ const buscaDados = async() => {
     const jsonData = await dados.json();
   
     preencherLista(jsonData);
-
-
-
-
 }
 
 const preencherLista = (jsonData) => {
@@ -47,6 +48,7 @@ const preencherLista = (jsonData) => {
     jsonData.forEach(y => {
 
         let obj = {
+            id: y.id,
             nome: y.nome,
             path: y.imagem,
             preco: y.preco
@@ -55,11 +57,25 @@ const preencherLista = (jsonData) => {
         content.appendChild(card(obj)) 
 
     })
+   
+    getButtonsBuy()
 }
 
+let testIdExport = ""
+const getButtonsBuy = () => {
+    const buttonsBuy = document.querySelectorAll('.btn_cdCompra');
+
+    buttonsBuy.forEach(x => {
+        x.addEventListener('click', j => {
+            testIdExport = localStorage.setItem("productId", x.parentNode.children.item(2).textContent)
+        })
+    })
 
 
+    console.log(buttonsBuy);
+}
 
+export default testIdExport;
 
 
 

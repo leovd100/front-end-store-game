@@ -20,8 +20,13 @@
 
 }
 
+
 .header__gameStore ul li:nth-child(5){
     margin-right: 2rem;
+}
+
+.header__gameStore ul li:nth-child(1){
+    margin-left: 0;
 }
 
 .header__gameStore ul li:hover{
@@ -33,14 +38,9 @@
 img[logo]{
     width:  9rem;
 }
+.header_content_left{
+    display: flex;
 
-.form-search{
-   
+    align-items: center;
     
-    margin-left: 6rem;
-}
-.form-search .form_imput{
-    border-radius: 5px;
-    width: 25rem;
-    height: 2rem;
 }
