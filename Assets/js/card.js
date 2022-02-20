@@ -1,6 +1,11 @@
 const content = document.querySelector(".content");
 
 
+const changePage = () => {
+    window.location.href = "../../productPage.html";
+}
+
+
 const card = (objeto) => {
     const card = document.createElement("div");
     const img = document.createElement("img");
@@ -24,16 +29,16 @@ const card = (objeto) => {
     card.appendChild(id);
     preco.textContent = objeto.preco.toFixed(2);//"99,90";
     card.appendChild(preco)
-    
+    button.onclick = changePage;
     button.textContent = "Comprar";
     button.className = "btn_cdCompra";
     card.appendChild(button)
 
-
-
     return card;
 }
- 
+
+
+
 
 const buscaDados = async() => {
     let url = "http://localhost:8081/games"
@@ -55,10 +60,11 @@ const preencherLista = (jsonData) => {
         }
         
         content.appendChild(card(obj)) 
-
+        
     })
    
     getButtonsBuy()
+
 }
 
 let testIdExport = ""
@@ -72,7 +78,7 @@ const getButtonsBuy = () => {
     })
 
 
-    console.log(buttonsBuy);
+    
 }
 
 export default testIdExport;
@@ -83,7 +89,7 @@ export default testIdExport;
 // Mocando dados
 /*
  let x =[ {
-    //id:1, 
+    id:1, 
     nome: "Anthem",
     path: "Assets/img/webp/anthem.webp",
     preco: 75.99
@@ -91,16 +97,18 @@ export default testIdExport;
     // Marca: 1 - Xbox 2 - Playstation 3 - Nintendo 4 -PC 5 -Periféricos
 },
 {
-
+    id:2,
     nome: "Batman Arkham Knight",
     path: "Assets/img/webp/Batman Xbox.webp",
     preco: 48.00
 },
 {
+    id:3,
     nome: "Battlefield",
     path: "Assets/img/webp/bf2042.webp",
     preco: 143.00
 },{
+    id:4,
     nome: "Cyber Punk 2077",
     path: "Assets/img/webp/cyberPunk.webp",
     preco: 39.90
@@ -232,19 +240,13 @@ export default testIdExport;
     preco: 69.90
 },
 
-
-
-
-
-
 ]
 
 x.forEach( x => {
     content.appendChild(card(x))
 }) 
+
 */
-
-
 
 
 
