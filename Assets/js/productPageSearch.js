@@ -31,6 +31,7 @@ const searchData = async(id) => {
     prod.nome = jsonData.nome;
     prod.imagem = jsonData.imagem;
     prod.preco = jsonData.preco;
+    prod.descricao = jsonData.descricao
        
     buildPage(prod);
     //preencherLista(jsonData);
@@ -83,6 +84,11 @@ const FreeShipping = () =>  {
     freeShippingBlock.textContent = "FRETE GRÁTIS"
     return freeShippingBlock;
 }
+
+
+
+
+
 
 
 searchData(idProduct);

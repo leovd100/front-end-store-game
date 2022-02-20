@@ -62,7 +62,7 @@ const preencherLista = (jsonData) => {
         content.appendChild(card(obj)) 
         
     })
-   
+    
     getButtonsBuy()
 
 }
@@ -77,7 +77,7 @@ const getButtonsBuy = () => {
         })
     })
 
-
+    
     
 }
 

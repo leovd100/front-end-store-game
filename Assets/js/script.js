@@ -38,13 +38,6 @@ pathVideo: "./Assets/vid/godofwar.mp4#t8,100"
 
 
 
-form.addEventListener('submit', event => {
-    event.preventDefault();
-    localStorage.setItem("data", campo.value);
-    if(localStorage.getItem("data") != null){
-        window.location.href = "../../searchPage.html"
-    }
-})
 
 let indexMain = 0;
 

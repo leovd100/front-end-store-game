@@ -4,13 +4,21 @@ const campo = document.querySelector('.form_imput');
 const content = document.querySelector(".content");
 
 
+const changePage = () => {
+    window.location.href = "../../productPage.html";
+}
+
+
+
 const card = (objeto) => {
     const card = document.createElement("div");
     const img = document.createElement("img");
     const preco = document.createElement("p");
     const button = document.createElement("button");
     const name = document.createElement("p");
+    const id = document.createElement("span");
 
+    id.className = "id";
     name.className = "nameGame"
     preco.className = "precoGame"
     card.className = "card";
@@ -24,7 +32,10 @@ const card = (objeto) => {
     preco.textContent = objeto.preco.toFixed(2);//"99,90";
     card.appendChild(preco)
     button.textContent = "Comprar";
-    button.className = "btn_compra";
+    button.className = "btn_cdCompra";
+    button.onclick = changePage
+    id.innerText = objeto.id;
+    card.appendChild(id);
     card.appendChild(button)
 
     return card;
@@ -42,14 +53,16 @@ const buscaDados = async(value) => {
     }else {
         content.innerHTML = ""
         preencherLista(jsonData);
+    
     }
 }
 
 const preencherLista = (jsonData) => {
     
     jsonData.forEach(y => {
-
+        
         let obj = {
+            id: y.id,
             nome: y.nome,
             path: y.imagem,
             preco: y.preco
@@ -58,7 +71,7 @@ const preencherLista = (jsonData) => {
         content.appendChild(card(obj)) 
 
     })
-    
+    getButtonsBuy();    
 }
 
 
@@ -67,10 +80,22 @@ const preencherLista = (jsonData) => {
 form.addEventListener('submit', event => {
     event.preventDefault();
     removeAll();
-    if(campo.value != ''){
+    
         buscaDados(campo.value)
-    }
+    
 })
+
+const getButtonsBuy = () => {
+    const buttonsBuy = document.querySelectorAll('.btn_cdCompra');
+
+    buttonsBuy.forEach(x => {
+        x.addEventListener('click', j => {
+            localStorage.setItem("productId", x.parentNode.children.item(3).textContent)
+                
+        })
+    })   
+}
+
 
 
 function notFound(){
