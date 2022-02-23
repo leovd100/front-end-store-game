@@ -5,6 +5,6 @@ form.addEventListener('submit', event => {
     event.preventDefault();
     localStorage.setItem("data", campo.value);
     if(localStorage.getItem("data") != null){
-        window.location.href = "../../searchPage.html"
+        window.location.href = "./searchPage.html"
     }
 })

@@ -1,0 +1,27 @@
+.content_sobre{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5rem;
+}
+
+
+.container{
+    width: 30rem;
+    box-shadow: 0 0 10px 2px black;
+    border-radius: 1rem;
+    padding: 5rem;
+}
+.title{
+    position: relative;
+}
+
+h2::before{
+    content: "";
+    width: 5.3rem;
+    height: 0.5rem;
+    background: red;
+    position: absolute;
+    bottom: -5px;
+}

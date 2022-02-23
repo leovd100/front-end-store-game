@@ -4,17 +4,18 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script src="Assets/js/AuxSearch.js" defer></script>
-        <script type="module"  src="Assets/js/script.js" defer></script>
+        <script src="../Assets/js/AuxSearch.js" defer></script>
+        <script type="module"  src="../Assets/js/script.js" defer></script>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <script type="module" src="Assets/js/card.js" defer></script>
-        <script src="./Assets/js/cardbuy.js" defer></script>
+        <script type="module" src="../Assets/js/card.js" defer></script>
+        <script src="../Assets/js/cardbuy.js" defer></script>
+        <script src="../Assets/js/header.js" defer></script>
         <title>Document</title>
 </head>
     <body>
         <header class="header__gameStore">
             <div>
-                <img src="./Assets/img/dgames.png" alt="logo" logo>
+                <img src="../Assets/img/dgames.png" alt="logo" logo>
             </div>
 
             <div class="header_content_left">
@@ -26,11 +27,11 @@
 
                 <div>
                     <ul>
-                        <li>Playstation</li>
-                        <li>Xbox</li>
-                        <li>Nintendo</li>
-                        <li>Sobre</li>
-                        <li>Contato</li>
+                        <li class="pageSelect" id="2">Playstation</li>
+                        <li class="pageSelect" id="1">Xbox</li>
+                        <li class="pageSelect" id="3">Nintendo</li>
+                        <li class="">Sobre</li>
+                        <li class="">Contato</li>
                     </ul>
                 </div>
             </div>
@@ -41,17 +42,17 @@
                 <div left> &lt;&lt; </div>
                 <div right> &gt;&gt; </div> 
                 <div class="container_btn">
-                    <img class="logo_game" src="Assets/img/tlouLogo.png" alt="" >
+                    <img class="logo_game" src="../Assets/img/tlouLogo.png" alt="" >
                     <div class="btn_option">
                         <div class="btn-compra">Comprar Agora!</div>
                         <div class="btn-sobre">Saiba mais</div>
                     </div>
                 </div>
 
-                <img class="person" src="Assets/img/persons/thelast.png" alt="">
-                <video class="bg-video__content" autoplay muted loop poster="./Assets/img/screen_black.png">
-                   <source class="vd1" src="./Assets/vid/thelast2.mp4#t=15,0" type="video/mp4">
-                   <source class="vd1" src="./Assets/vid/thelast2.mp4#t=15,0" type="video/webm">
+                <img class="person" src="../Assets/img/persons/thelast.png" alt="">
+                <video class="bg-video__content" autoplay muted loop poster="../Assets/img/screen_black.png">
+                   <source class="vd1" src="../Assets/vid/thelast2.mp4#t=15,0" type="video/mp4">
+                   <source class="vd1" src="../Assets/vid/thelast2.mp4#t=15,0" type="video/webm">
                    Your browser is not supported!
                 </video>
                 
@@ -80,10 +81,11 @@
             </div>
 
         </footer>
-        <link rel="stylesheet" href="Assets/css/main.css">
-        <link rel="stylesheet" href="Assets/css/header.css" defer>
-        <link rel="stylesheet" href="Assets/css/style.css" defer>
-        <link rel="stylesheet" href="Assets/css/card.css"defer>
-        <link rel="stylesheet" href="Assets/css/search.css">
+        <link rel="stylesheet" href="../Assets/css/main.css">
+        <link rel="stylesheet" href="../Assets/css/header.css" >
+        <link rel="stylesheet" href="../Assets/css/style.css" >
+        <link rel="stylesheet" href="../Assets/css/card.css">
+        <link rel="stylesheet" href="../Assets/css/search.css">
+        
     </body> 
 </html>

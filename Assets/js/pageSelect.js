@@ -1,11 +1,11 @@
-
-const form = document.querySelector('.form-search');
-const campo = document.querySelector('.form_imput');
 const content = document.querySelector(".content");
+const id =  localStorage.getItem("idSelect");
+
 
 const changePage = () => {
-    window.location.href = "../../productPage.html";
+    window.location.href = "./productPage.html";
 }
+
 
 const card = (objeto) => {
     const card = document.createElement("div");
@@ -26,33 +26,31 @@ const card = (objeto) => {
     card.appendChild(img)
     name.textContent = objeto.nome;
     card.appendChild(name);
-    preco.textContent = objeto.preco.toFixed(2);//"99,90";
-    card.appendChild(preco)
-    button.textContent = "Comprar";
-    button.className = "btn_cdCompra";
-    button.onclick = changePage
     id.innerText = objeto.id;
     card.appendChild(id);
+    preco.textContent = objeto.preco.toFixed(2);//"99,90";
+    card.appendChild(preco)
+    button.onclick = changePage;
+    button.textContent = "Comprar";
+    button.className = "btn_cdCompra";
     card.appendChild(button)
 
     return card;
 }
 
 
-const buscaDados = async(value) => {
-    let url = `http://localhost:8081/games/filter?name=${value}` 
+
+
+const buscaDados = async(valor) => {
+    let url = `http://localhost:8081/games/filter/sessao?id=${valor}`
     const dados = await fetch(url)
     const jsonData = await dados.json();
-    if (jsonData.length == 0){
-        content.innerText = ""
-        notFound();
-    }else {
-        content.innerHTML = ""
-        preencherLista(jsonData);
-    }
+  
+    preencherLista(jsonData);
 }
 
 const preencherLista = (jsonData) => {
+
     jsonData.forEach(y => {
         let obj = {
             id: y.id,
@@ -61,48 +59,26 @@ const preencherLista = (jsonData) => {
             preco: y.preco
         }
         content.appendChild(card(obj)) 
+        
     })
-    getButtonsBuy();    
+    
+    getButtonsBuy()
+
 }
 
-
-
-
-form.addEventListener('submit', event => {
-    event.preventDefault();
-    removeAll();
-
-        buscaDados(campo.value)
-    
-})
-
+let testIdExport = ""
 const getButtonsBuy = () => {
     const buttonsBuy = document.querySelectorAll('.btn_cdCompra');
 
     buttonsBuy.forEach(x => {
         x.addEventListener('click', j => {
-            localStorage.setItem("productId", x.parentNode.children.item(3).textContent)
-                
+            testIdExport = localStorage.setItem("productId", x.parentNode.children.item(2).textContent)
         })
-    })   
+    })
 }
 
 
-
-function notFound(){
-    const text = document.createElement("div");
-    text.className = "text_notFound"
-    text.innerHTML = `<h2><span class="notFound">Ops!</span> Não foi encontrado nenhum resultado para a busca<span class="notFound"> "${campo.value}" </span> </h2>`
-    content.appendChild(text); 
-}
+buscaDados(id);
 
 
 
-
-function removeAll(){
-    let card = document.querySelectorAll(".card");
-    card.forEach(x => x.remove());
-}
-
-campo.value = localStorage.getItem("data");
-buscaDados(campo.value);

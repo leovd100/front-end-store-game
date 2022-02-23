@@ -58,7 +58,7 @@ btn_nextLeft.addEventListener('click' ,() => {
 
 btn_nextRight.addEventListener('click' ,() => {
     console.log(indexMain)
-    console.log("cliclou")
+
     indexMain++;
     if (indexMain > 2){
         indexMain = 0;
@@ -70,29 +70,29 @@ btn_nextRight.addEventListener('click' ,() => {
 
 })
 
-
+// CADA UM SER UM ARQUIVO
 let changeLogo = (e) => {
-    const path = ["./Assets/img/logoGame.png", "./Assets/img/tlouLogo.png" , "./Assets/img/halo-logo.png"]
+    const path = ["../Assets/img/logoGame.png", "../Assets/img/tlouLogo.png" , "../Assets/img/halo-logo.png"]
    
     return path[e];
 }
 
 let changePerson = (e) => {
     const path = [
-        "./Assets/img/persons/kratos.png", "./Assets/img/persons/thelast.png", "./Assets/img/persons/helo.png",
+        "../Assets/img/persons/kratos.png", "../Assets/img/persons/thelast.png", "../Assets/img/persons/helo.png",
     ]
     return path[e]
 }
 
 let changeVideo = (e) => {
-    const path = ['./Assets/vid/godofwar.mp4#t8,100', "./Assets/vid/thelast2.mp4#t8,100", "./Assets/vid/haloinfinite.mp4#t8,100"]
+    const path = ['../Assets/vid/godofwar.mp4#t8,100', "../Assets/vid/thelast2.mp4#t8,100", "../Assets/vid/haloinfinite.mp4#t8,100"]
     return path[e]
 }
 
 
 let changeBackGround = (index) => {
     const path = [
-        './Assets/img/montanha.jpg','./Assets/img/scenaryTheLast.jpg','./Assets/img/halo-background.webp'
+        '../Assets/img/montanha.jpg','../Assets/img/scenaryTheLast.jpg','../Assets/img/halo-background.webp'
     ]
     
     return path[index];

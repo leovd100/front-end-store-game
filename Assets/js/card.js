@@ -2,7 +2,7 @@ const content = document.querySelector(".content");
 
 
 const changePage = () => {
-    window.location.href = "../../productPage.html";
+    window.location.href = "./productPage.html";
 }
 
 
@@ -51,14 +51,12 @@ const buscaDados = async() => {
 const preencherLista = (jsonData) => {
 
     jsonData.forEach(y => {
-
         let obj = {
             id: y.id,
             nome: y.nome,
             path: y.imagem,
             preco: y.preco
         }
-        
         content.appendChild(card(obj)) 
         
     })
