@@ -21,6 +21,10 @@
 
 .img_product{
     width: 30rem;
+    
+    padding: 22px 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 20px 3px black;
 }
 
 
@@ -51,6 +55,8 @@
 
 .container_info_product{
     
+    border-radius: 10px;
+    box-shadow: 0 0 20px 3px black;
     width: 32rem;
     padding: 2rem;
 }
