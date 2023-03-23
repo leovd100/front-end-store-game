@@ -4,7 +4,7 @@ const campo = document.querySelector('.form_imput');
 const content = document.querySelector(".content");
 
 const changePage = () => {
-    window.location.href = "../../productPage.html";
+    window.location.href = "./productPage.html";
 }
 
 const card = (objeto) => {
