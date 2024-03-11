@@ -2,18 +2,8 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="../Assets/css/header.css" />
-    <link rel="stylesheet" href="../Assets/css/card.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
-      integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
   </head>
   <body>
     <header class="header__gameStore">
@@ -61,23 +51,38 @@
         </div>
       </div>
     </header>
-    <div class="content"></div>
 
-    <footer>
-      <div class="container-footer">
-        <div class="lista_footer">
-          <ul>
-            <li>Sobre</li>
-            <li>Contato</li>
-            <li>Faq</li>
-          </ul>
+    <main>
+      <div class="container_login">
+        <div class="login_info">
+          <div class="image-login">
+            <img src="../Assets/img/dgames.png" alt="logo" logo />
+          </div>
+
+          <form action="">
+            <label for="email-login"></label>
+            <input type="email" id="email-login" placeholder="E-mail" />
+            <label for="entry-ps"></label>
+            <input
+              type="password"
+              name=""
+              id="entry-ps"
+              placeholder="Password"
+            />
+            <button type="submit">Login</button>
+            <div class="account-help">
+              <a href="">Esqueci minha senha</a> /
+              <a href="">Criar uma nova conta</a>
+            </div>
+          </form>
         </div>
       </div>
-      <div class="rodape">Desenvolvido por - Leonardo Vieira Demetrio</div>
-    </footer>
-    <script type="module" src="../Assets/js/header.js" defer></script>
+    </main>
+
+    <script src="../Assets/js/header.js"></script>
+    <link rel="stylesheet" href="../Assets/css/login.css" />
     <link rel="stylesheet" href="../Assets/css/main.css" />
-    <script type="module" src="../Assets/js/search.js" defer></script>
+    <link rel="stylesheet" href="../Assets/css/header.css" />
     <link rel="stylesheet" href="../Assets/css/search.css" />
   </body>
 </html>

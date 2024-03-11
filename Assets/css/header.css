@@ -1,54 +1,92 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700&display=swap");
 
-*{
-    font-family: 'Roboto', sans-serif;
+* {
+  font-family: "Roboto", sans-serif;
 }
 
-
-
-.header__gameStore{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: black;
-    color: white;
-    height: 6rem;
-    padding: 1rem;
-    box-shadow:  0 0 5px 10px black;
+.header__gameStore {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(45deg, black, black, white);
+  color: white;
+  height: 6rem;
+  padding: 1rem;
+  box-shadow: 0 0 5px 10px black;
 }
 
-.header__gameStore ul{
-    display: flex;
+.header__gameStore ul {
+  display: flex;
 }
 
-.header__gameStore ul li{
-    list-style: none;
-    margin-left: 2rem;
-    transition: font-weight 0.4s ease-in-out;
-
+.header__gameStore ul li {
+  list-style: none;
+  margin-left: 2rem;
+  transition: font-weight 0.4s ease-in-out;
 }
 
-
-.header__gameStore ul li:nth-child(5){
-    margin-right: 2rem;
+.header__gameStore ul li:nth-child(5) {
+  margin-right: 2rem;
 }
 
-.header__gameStore ul li:nth-child(1){
-    margin-left: 0;
+.header__gameStore ul li:nth-child(1) {
+  margin-left: 0;
 }
 
-.header__gameStore ul li:hover{
-    text-decoration: underline;
-    cursor: pointer;
-    font-weight: 600;
+.header__gameStore ul li:hover {
+  text-decoration: underline;
+  cursor: pointer;
+  font-weight: 600;
 }
 
-img[logo]{
-    width:  9rem;
+img[logo] {
+  width: 9rem;
 }
-.header_content_left{
-    display: flex;
+.header_content_left {
+  display: flex;
 
-    align-items: center;
-    
+  align-items: center;
+}
+
+.icon_menu img {
+  width: 3rem;
+}
+
+#playstation_icon {
+  filter: drop-shadow(1px 0px 0px rgb(0, 110, 255))
+    drop-shadow(-1px -0px 0 rgb(0, 238, 255));
+}
+
+#playstation_icon:hover {
+  filter: drop-shadow(1px 0px 5px rgb(2, 255, 242))
+    drop-shadow(-1px -0px 0 rgb(0, 238, 255));
+}
+
+#xbox_icon {
+  filter: drop-shadow(1px 0px 0px rgb(2, 255, 129))
+    drop-shadow(-1px -0px 0px rgb(0, 255, 76));
+}
+
+#xbox_icon:hover {
+  filter: drop-shadow(1px 0px 2px rgb(2, 255, 129))
+    drop-shadow(-1px -0px 2px rgb(0, 255, 76));
+}
+
+#nintendo_icon {
+  filter: drop-shadow(1px 0px 0px rgb(238, 165, 165))
+    drop-shadow(-1px -0px 0px rgb(122, 5, 5));
+}
+
+#nintendo_icon:hover {
+  filter: drop-shadow(1px 0px 2px rgb(255, 61, 2))
+    drop-shadow(-1px -0px 2px rgb(255, 0, 0));
+}
+
+#user_login {
+  width: 3rem;
+  transition: transform 1s ease-in;
+}
+
+#user_login:hover {
+  transform: rotateY(360deg);
 }

@@ -1,91 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script src="../Assets/js/AuxSearch.js" defer></script>
-        <script type="module"  src="../Assets/js/script.js" defer></script>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <script type="module" src="../Assets/js/card.js" defer></script>
-        <script src="../Assets/js/cardbuy.js" defer></script>
-        <script src="../Assets/js/header.js" defer></script>
-        <title>Document</title>
-</head>
-    <body>
-        <header class="header__gameStore">
-            <div>
-                <img src="../Assets/img/dgames.png" alt="logo" logo>
-            </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="../Assets/js/AuxSearch.js" defer></script>
+    <script type="module" src="../Assets/js/script.js" defer></script>
 
-            <div class="header_content_left">
-                <form action class="form-search searchbox">
-                    <input type="text" class="form_imput searchText" placeholder="Search...">
-                    <button type="submit" class="searchBtn"><i class="fas fa-search "></i></button>
-                </form>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+      integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 
+    <script type="module" src="../Assets/js/CardFactory.js" defer></script>
 
-                <div>
-                    <ul>
-                        <li class="pageSelect" id="2">Playstation</li>
-                        <li class="pageSelect" id="1">Xbox</li>
-                        <li class="pageSelect" id="3">Nintendo</li>
-                        <li class="">Sobre</li>
-                        <li class="">Contato</li>
-                    </ul>
-                </div>
-            </div>
-            
-        </header>
-        <main>
-            <div class="bg-video">
-                <div left> &lt;&lt; </div>
-                <div right> &gt;&gt; </div> 
-                <div class="container_btn">
-                    <img class="logo_game" src="../Assets/img/tlouLogo.png" alt="" >
-                    <div class="btn_option">
-                        <div class="btn-compra">Comprar Agora!</div>
-                        <div class="btn-sobre">Saiba mais</div>
-                    </div>
-                </div>
+    <title>Document</title>
+  </head>
+  <body>
+    <header class="header__gameStore">
+      <div>
+        <img src="../Assets/img/dgames.png" alt="logo" logo />
+      </div>
 
-                <img class="person" src="../Assets/img/persons/thelast.png" alt="">
-                <video class="bg-video__content" autoplay muted loop poster="../Assets/img/screen_black.png">
-                   <source class="vd1" src="../Assets/vid/thelast2.mp4#t=15,0" type="video/mp4">
-                   <source class="vd1" src="../Assets/vid/thelast2.mp4#t=15,0" type="video/webm">
-                   Your browser is not supported!
-                </video>
-                
-                
-            </div>
+      <div class="header_content_left">
+        <form action class="form-search searchbox">
+          <input
+            type="text"
+            class="form_imput searchText"
+            placeholder="Search..."
+          />
+          <button type="submit" class="searchBtn">
+            <i class="fas fa-search"></i>
+          </button>
+        </form>
 
-            <div class="content">
+        <div>
+          <ul id="game_header_list">
+            <li class="pageSelect icon_menu" id="2">
+              <img
+                id="playstation_icon"
+                src="../Assets/icons/playstation.png"
+                alt=""
+              />
+            </li>
+            <li class="pageSelect icon_menu" id="1">
+              <img id="xbox_icon" src="../Assets/icons/xbox.png" alt="" />
+            </li>
+            <li class="pageSelect icon_menu" id="3">
+              <img
+                id="nintendo_icon"
+                src="../Assets/icons/nintendo.png"
+                alt=""
+              />
+            </li>
+            <li class="pageSelect" id="user">
+              <img id="user_login" src="../Assets/icons/usuario.png" alt="" />
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="bg-video">
+        <div left>&lt;&lt;</div>
+        <div right>&gt;&gt;</div>
+        <div class="container_btn">
+          <img class="logo_game" src="../Assets/img/tlouLogo.png" alt="" />
+          <div class="btn_option">
+            <div class="btn-compra">Comprar Agora!</div>
+            <div class="btn-sobre">Saiba mais</div>
+          </div>
+        </div>
 
+        <img class="person" src="../Assets/img/persons/thelast.png" alt="" />
+        <video
+          class="bg-video__content"
+          autoplay
+          muted
+          loop
+          poster="../Assets/img/screen_black.png"
+        >
+          <source
+            class="vd1"
+            src="../Assets/vid/thelast2.mp4#t=15,0"
+            type="video/mp4"
+          />
+          <source
+            class="vd1"
+            src="../Assets/vid/thelast2.mp4#t=15,0"
+            type="video/webm"
+          />
+          Your browser is not supported!
+        </video>
+      </div>
 
-            </div>
-            
-        </main>
+      <div class="content"></div>
+    </main>
 
-        <footer>
-            <div class="container-footer">
-                <div class="lista_footer">
-                    <ul>
-                        <li>Sobre</li>
-                        <li>Contato</li>
-                        <li>Faq</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="rodape">
-                Desenvolvido por - Leonardo Vieira Demetrio
-            </div>
+    <footer>
+      <div class="container-footer">
+        <div class="lista_footer">
+          <ul>
+            <li>Sobre</li>
+            <li>Contato</li>
+            <li>Faq</li>
+          </ul>
+        </div>
+      </div>
+      <div class="rodape">Desenvolvido por - Leonardo Vieira Demetrio</div>
+    </footer>
 
-        </footer>
-        <link rel="stylesheet" href="../Assets/css/main.css">
-        <link rel="stylesheet" href="../Assets/css/header.css" >
-        <link rel="stylesheet" href="../Assets/css/style.css" >
-        <link rel="stylesheet" href="../Assets/css/card.css">
-        <link rel="stylesheet" href="../Assets/css/search.css">
-        
-    </body> 
+    <script src="../Assets/js/header.js"></script>
+    <script src="../Assets/components/GameSearchForm.js"></script>
+    <link rel="stylesheet" href="../Assets/css/main.css" />
+    <link rel="stylesheet" href="../Assets/css/header.css" />
+    <link rel="stylesheet" href="../Assets/css/style.css" />
+    <link rel="stylesheet" href="../Assets/css/card.css" />
+    <link rel="stylesheet" href="../Assets/css/search.css" />
+  </body>
 </html>

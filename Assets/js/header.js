@@ -1,20 +1,23 @@
-const select = document.querySelectorAll(".pageSelect");
-const myArray = Array.from(select);
+const select = document.querySelectorAll("#game_header_list .pageSelect");
 
+select.forEach((element) => {
+  element.addEventListener("click", (event) => {
+    const clickedElement = event.currentTarget;
+    const id = clickedElement.getAttribute("id");
+    if (id == "user") {
+      window.location.href = "./login.html";
+    } else {
+      localStorage.setItem("idSelect", id);
 
-myArray.forEach(x => { 
-    x.addEventListener("click", j => {
-        localStorage.setItem("idSelect", j.target.id)
-        
-         if(localStorage.getItem("idSelect") != null){
-            window.location.href = "./pageSelect.html"
-        } 
+      if (localStorage.getItem("idSelect") !== null) {
+        window.location.href = "./pageSelect.html";
+      }
     }
-)})
+  });
+});
 
 /*
     1 - play
     2 - xbox
     3 - nintendo
 */
-
